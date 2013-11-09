@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='pb.web.gwt.gwt' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/gwt/greet" class="pb.web.gwt.server.GreetingServiceImpl" />
+
+</module>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features>
+	<feature name="pb" version="0.1.0">
+	
+		<feature>scr</feature>
+		<feature>http</feature>
+		<feature>http-whiteboard</feature>
+		<feature>war</feature>
+		<feature>hibernate</feature>
+
+
+		<!-- required external bundle--> 
+		<bundle>mvn:commons-fileupload/commons-fileupload/1.2.1</bundle>
+		<bundle>mvn:commons-io/commons-io/2.4</bundle>
+
+		<!-- Application bundles -->
+
+		<bundle>mvn:pb/pb.persistence.itf/0.1.0</bundle>
+		<bundle>mvn:pb/pb.persistence/0.1.0</bundle>
+		<bundle>mvn:pb/pb.model.itf/0.1.0</bundle>
+		<bundle>mvn:pb/pb.model/0.1.0</bundle>
+		<bundle>mvn:pb/pb.party.sim/0.1.0</bundle>
+		<bundle>mvn:pb/pb.web.simple/0.1.0</bundle>
+		<bundle>mvn:pb/pb.web.gwt/0.1.0</bundle>
+		
+	</feature>
+</features>
