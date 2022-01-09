@@ -37,56 +37,54 @@ import javax.persistence.Table;
 @Entity
 @Table(name = ClientId.TABLE_NAME)
 public class ClientId {
-	public static final String TABLE_NAME = "CLIENT_ID";
+  public static final String TABLE_NAME = "CLIENT_ID";
 
-	public static final String COLUMN_CANDIDATE_ID = "CANDIDATE_ID";
-	public static final String COLUMN_IP = "IP";
+  public static final String COLUMN_CANDIDATE_ID = "CANDIDATE_ID";
+  public static final String COLUMN_IP = "IP";
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = COLUMN_CANDIDATE_ID)
-	protected int id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE)
+  @Column(name = COLUMN_CANDIDATE_ID)
+  protected int id;
 
-	@Basic
-	@Column(name = COLUMN_IP)
-	protected String ip;
+  @Basic
+  @Column(name = COLUMN_IP)
+  protected String ip;
 
-	public ClientId() {
-		super();
-	}
+  public ClientId() {
+    super();
+  }
 
-	public ClientId(final String ip) {
-		super();
-		this.ip = ip;
-	}
+  public ClientId(final String ip) {
+    super();
+    this.ip = ip;
+  }
 
-	/**
-	 * @return the id
-	 */
-	public int getId() {
-		return id;
-	}
+  /**
+   * @return the id
+   */
+  public int getId() {
+    return this.id;
+  }
 
-	/**
-	 * @param id
-	 *            the id to set
-	 */
-	public void setId(final int id) {
-		this.id = id;
-	}
+  /**
+   * @param id the id to set
+   */
+  public void setId(final int id) {
+    this.id = id;
+  }
 
-	/**
-	 * @return the ip
-	 */
-	public String getIp() {
-		return ip;
-	}
+  /**
+   * @return the ip
+   */
+  public String getIp() {
+    return this.ip;
+  }
 
-	/**
-	 * @param ip
-	 *            the ip to set
-	 */
-	public void setIp(final String ip) {
-		this.ip = ip;
-	}
+  /**
+   * @param ip the ip to set
+   */
+  public void setIp(final String ip) {
+    this.ip = ip;
+  }
 }
